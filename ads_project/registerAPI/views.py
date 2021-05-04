@@ -10,7 +10,7 @@ def register(request):
     form = CreateUserForm()
     context = {'form': form}
 
-    if request.method == 'POST':
+    if request.method == 'post':
         form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
