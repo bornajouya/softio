@@ -1,0 +1,154 @@
+html{
+    background: linear-gradient(145deg, rgb(15, 16, 82) 0%, rgb(93, 187, 231) 100%);
+}
+ body{
+     background-color: #ffffff;
+     margin-left: 250px;
+     margin-right: 250px;
+     margin-top: 50px;
+     margin-bottom: 50px;
+     border-radius: 15px;
+     box-shadow: #ffffff;
+ }
+ .box-1 {
+     display: flex;
+ }
+ .box-img img{
+     max-width: 320px;
+     margin-top: 180px;
+     margin-left: 60px;
+    
+ }
+ .box-register {
+     display: block;
+     margin-left: 90px;
+ }
+ .box-register h1 {
+     color: rgb(53, 53, 155);
+     margin-left: 90px;
+     margin-top: 30px;
+ }
+ .name {
+     display: flex;
+     margin-top: 30px;
+ }
+ input[type='name']  {
+    display: flex;
+    padding-left: 15px;
+    background-color: rgb(220, 223, 236);
+    width: 140px;
+    height: 35px;
+    border-radius: 20px;
+    border: 0px solid;
+
+}
+input[type='last name']  {
+    display: flex;
+    padding-left: 15px;
+    background-color: rgb(220, 223, 236);
+    width: 140px;
+    height: 35px;
+    margin-left: 10px;
+    border-radius: 20px;
+    border: 0px solid;
+}
+input[type='username']  {
+    display: flex;
+    padding-left: 15px;
+    background-color: rgb(220, 223, 236);
+    border-radius: 20px;  
+    margin-left: 15px;
+    width: 260;
+    height: 35px;
+    border: 0px solid;
+
+}
+input[type='email'] {
+    display: flex;
+    padding-left: 15px;
+    background-color: rgb(220, 223, 236);
+    border-radius: 20px;
+    margin-top: 18px;
+    margin-left: 15px;
+    width: 260;
+    height: 35px;
+    border: 0px solid;
+
+}
+input[type='password'] {
+    display: flex;
+    padding-left: 15px;
+    background-color: rgb(220, 223, 236);
+    border-radius: 20px;
+    margin-top: 18px;
+    margin-left: 15px;
+    width: 260;
+    height: 35px;
+    border: 0px solid;
+
+}
+input[type='rewritepassword'] {
+    display: flex;
+    padding-left: 15px;
+    box-sizing: border-box;
+    background-color: rgb(220, 223, 236);
+    border-radius: 20px;
+    padding-left: 20px;
+    margin-top: 18px;
+    width: 260;
+    height: 35px;
+    border: 0px solid;
+
+}
+.capcha {
+    display: flex;
+    margin-top: 18px;
+    margin-left: 5px;
+}
+input[type='capcha']  {
+    display: flex;
+    text-align: center;
+    background-color: rgb(220, 223, 236);
+    width: 140px;
+    height: 35px;
+    margin-left: 15px;
+    border-radius: 20px;
+    border: 0px solid;
+
+
+}
+.capchaimg img {
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+input[type='name'] :focus,
+input[type='last name'] :focus,
+input[type='username'] :focus,
+input[type='email'] :focus,
+input[type='password'] :focus,
+input[type='rewritepassword'] :focus,
+input[type='capcha'] :focus{
+    border: 1px solid #ffffff;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, .13);
+}
+
+.signup{
+    margin-top: 20px;
+}
+input[type = 'button'] {
+    background-color: rgb(70, 138, 216);
+    width: 150px;
+    height: 45px;
+    border-radius: 15px;
+    margin-left: 75px;
+    border: 0px solid;
+    text-align: center;
+    color: #ffffff;
+    font-size: 22px;
+}
+input[type = 'button'] :hover{
+    background-color: rgb(27, 79, 100);
+}
+
