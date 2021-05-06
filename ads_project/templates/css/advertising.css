@@ -32,7 +32,7 @@ html{
      display: flex;
      margin-top: 30px;
  }
- input[type='name']  {
+ input[type='first_name']  {
     display: flex;
     padding-left: 15px;
     background-color: rgb(220, 223, 236);
@@ -42,7 +42,7 @@ html{
     border: 0px solid;
 
 }
-input[type='last name']  {
+input[type='last_name']  {
     display: flex;
     padding-left: 15px;
     background-color: rgb(220, 223, 236);
@@ -63,6 +63,20 @@ input[type='username']  {
     border: 0px solid;
 
 }
+
+input[type='username'] {
+    display: flex;
+    padding-left: 15px;
+    background-color: rgb(220, 223, 236);
+    border-radius: 20px;
+    margin-top: 18px;
+    margin-left: 15px;
+    width: 260;
+    height: 35px;
+    border: 0px solid;
+
+}
+
 input[type='email'] {
     display: flex;
     padding-left: 15px;
@@ -75,7 +89,7 @@ input[type='email'] {
     border: 0px solid;
 
 }
-input[type='password'] {
+input[type='password1'] {
     display: flex;
     padding-left: 15px;
     background-color: rgb(220, 223, 236);
@@ -87,7 +101,7 @@ input[type='password'] {
     border: 0px solid;
 
 }
-input[type='rewritepassword'] {
+input[type='password2'] {
     display: flex;
     padding-left: 15px;
     box-sizing: border-box;
@@ -137,7 +151,7 @@ input[type='capcha'] :focus{
 .signup{
     margin-top: 20px;
 }
-input[type = 'button'] {
+input[type = 'submit'] {
     background-color: rgb(70, 138, 216);
     width: 150px;
     height: 45px;
@@ -147,6 +161,7 @@ input[type = 'button'] {
     text-align: center;
     color: #ffffff;
     font-size: 22px;
+    margin-top: 10px;
 }
 input[type = 'button'] :hover{
     background-color: rgb(27, 79, 100);

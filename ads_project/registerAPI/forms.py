@@ -7,4 +7,12 @@ from django import forms
 class CreateUserForm(UserCreationForm):
     class Meta:
         model = User
-        fields = ['first_name', 'last_name', 'username','email', 'password1', 'password2']
+        fields = ['username','email', 'password1', 'password2']
+
+        widgets = {
+            'username': forms.TextInput(attrs={'type': 'username','placeholder':'username'}),
+            'email': forms.TextInput(attrs={'type': 'email','placeholder':'E-mail'}),
+            'password1': forms.TextInput(attrs={'type': 'password1','placeholder':'password'}),
+            'password2': forms.TextInput(attrs={'type': 'password2','placeholder':'re-try password'}),
+
+        }
