@@ -101,7 +101,7 @@ input[type='password1'] {
     border: 0px solid;
 
 }
-input[type='password2'] {
+input[type='password'] {
     display: flex;
     padding-left: 15px;
     box-sizing: border-box;

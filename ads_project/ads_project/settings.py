@@ -127,6 +127,6 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
-TEMPLATES_URL = 'register/'
+TEMPLATES_URL = 'temp/'
 
 TEMPLATES_ROOT = os.path.join(BASE_DIR, "templates/")
