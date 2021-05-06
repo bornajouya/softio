@@ -12,7 +12,7 @@ class CreateUserForm(UserCreationForm):
         widgets = {
             'username': forms.TextInput(attrs={'type': 'username','placeholder':'username'}),
             'email': forms.TextInput(attrs={'type': 'email','placeholder':'E-mail'}),
-            'password1': forms.TextInput(attrs={'type': 'password1','placeholder':'password'}),
-            'password2': forms.TextInput(attrs={'type': 'password2','placeholder':'re-try password'}),
+            'password1': forms.TextInput(attrs={'type': 'password','placeholder':'password'}),
+            'password2': forms.TextInput(attrs={'type': 'password','placeholder':'re-try password'}),
 
         }

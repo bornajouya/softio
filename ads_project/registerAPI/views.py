@@ -13,19 +13,19 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
 
-def login(request):
-    logout(request)
-    username = password = ''
-    if request.POST:
-        username = request.POST['username']
-        password = request.POST['password']
-
-        user = authenticate(username=username, password=password)
-        if user is not None:
-            if user.is_active:
-                login(request, user)
-                return HttpResponseRedirect('/main/')
-    return render(request, 'user_login.html', context=RequestContext(request))
+def login_member(request):
+    # logout(request)
+    # username = password = ''
+    # if request.POST:
+    #     username = request.POST['username']
+    #     password = request.POST['password']
+    #
+    #     user = authenticate(username=username, password=password)
+    #     if user is not None:
+    #         if user.is_active:
+    #             login(request, user)
+    #             return HttpResponseRedirect('/main/')
+    return render(request, 'login.html')
 
 
 # @never_cache
