@@ -15,6 +15,9 @@ from django.contrib import messages
 def login(request):
     return render(request, 'login.html')
 
+def index(request):
+    return render(request, 'index.html')
+
 def login_member(request):
     # logout(request)
     # username = password = ''
@@ -50,7 +53,7 @@ def register(request):
             for msg in form.error_messages:
                 messages.error(request, f"{msg}: {form.error_messages[msg]}")
                 print(msg)
-    return render(request, 'index.html', context=context)
+    return render(request, 'register.html', context=context)
 
 
 def signup(request):
@@ -65,4 +68,4 @@ def signup(request):
             return redirect('home')
     else:
         form = UserCreationForm()
-    return render(request, 'index.html', {'form': form})
+    return render(request, 'register.html', {'form': form})
