@@ -80,28 +80,15 @@
 
 
 
-<body>
-  <div class="box-a">
-    <div class="box-a1">
-      <img src="../temp/img/feb32be32a1b1a87f1f9c74da5be4b16.png" alt="">
-      <div class="box-a2" style="display: block;">
-        <h1>example title</h1>
-        <p>Application software (app for short) is computing software designed to carry out a specific task other than one relating to the operation of the computer itself,[1] typically to be used by end-users. Examples of an application include a word processor and a media player. The collective noun application software refers to all applications collectively.</p>
-        <nav class="button">
-          <ul class="group">
-            <li><a href="#">download</a></li>
-          </ul>
-      </nav>
-      </div>
-    </div>
-  </div>
 
-  <div class="box-a">
+<body>
+{% for ads in ads_list %}
+    <div class="box-a">
     <div class="box-a1">
-      <img src="../temp/img/feb32be32a1b1a87f1f9c74da5be4b16.png" alt="">
+      <img src="media/{{ads.photo}}" alt="">
       <div class="box-a2" style="display: block;">
-        <h1>example title</h1>
-        <p>Application software (app for short) is computing software designed to carry out a specific task other than one relating to the operation of the computer itself,[1] typically to be used by end-users. Examples of an application include a word processor and a media player. The collective noun application software refers to all applications collectively.</p>
+        <h1>{{ads.title}}</h1>
+        <head>{{ads.description}}</head>
         <nav class="button">
           <ul class="group">
             <li><a href="#">download</a></li>
@@ -110,6 +97,36 @@
       </div>
     </div>
   </div>
+{% endfor %}
+<!--  <div class="box-a">-->
+<!--    <div class="box-a1">-->
+<!--      <img src="../temp/img/feb32be32a1b1a87f1f9c74da5be4b16.png" alt="">-->
+<!--      <div class="box-a2" style="display: block;">-->
+<!--        <h1>example title</h1>-->
+<!--        <p>Application software (app for short) is computing software designed to carry out a specific task other than one relating to the operation of the computer itself,[1] typically to be used by end-users. Examples of an application include a word processor and a media player. The collective noun application software refers to all applications collectively.</p>-->
+<!--        <nav class="button">-->
+<!--          <ul class="group">-->
+<!--            <li><a href="#">download</a></li>-->
+<!--          </ul>-->
+<!--      </nav>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div class="box-a">-->
+<!--    <div class="box-a1">-->
+<!--      <img src="../temp/img/feb32be32a1b1a87f1f9c74da5be4b16.png" alt="">-->
+<!--      <div class="box-a2" style="display: block;">-->
+<!--        <h1>example title</h1>-->
+<!--        <p>Application software (app for short) is computing software designed to carry out a specific task other than one relating to the operation of the computer itself,[1] typically to be used by end-users. Examples of an application include a word processor and a media player. The collective noun application software refers to all applications collectively.</p>-->
+<!--        <nav class="button">-->
+<!--          <ul class="group">-->
+<!--            <li><a href="#">download</a></li>-->
+<!--          </ul>-->
+<!--      </nav>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
 </body>
 
 <footer style="background-color: black; height: 40px; margin-top: 30px;">
