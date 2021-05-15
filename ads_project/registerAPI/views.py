@@ -11,12 +11,16 @@ from .models import *
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from adsAPI.models import Ads
 
 def login(request):
     return render(request, 'login.html')
 
 def index(request):
-    return render(request, 'index.html')
+    context ={"ads_list": Ads.objects.values()}
+    for x in list(Ads.objects.values()):
+        print(type(x['description']))
+    return render(request, 'index.html',context=context)
 
 def login_member(request):
     # logout(request)
