@@ -12,28 +12,39 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from adsAPI.models import Ads
+import AdvancedHTMLParser
+
 
 def login(request):
     return render(request, 'login.html')
 
 def index(request):
-    context ={"ads_list": Ads.objects.values()}
-    for x in list(Ads.objects.values()):
-        print(type(x['description']))
+
+    ads_list = list(Ads.objects.values())
+    for x in ads_list:
+        # print(type(x['description']))
+        parser = AdvancedHTMLParser.AdvancedHTMLParser()
+
+        print(type(parser.parseStr("<p>gfjhg</p>")))
+        # x['description'] = '''<p>gfjhg</p>'''
+
+    context ={"ads_list": ads_list}
+
     return render(request, 'index.html',context=context)
 
 def login_member(request):
-    # logout(request)
-    # username = password = ''
-    # if request.POST:
-    #     username = request.POST['username']
-    #     password = request.POST['password']
-    #
-    #     user = authenticate(username=username, password=password)
-    #     if user is not None:
-    #         if user.is_active:
-    #             login(request, user)
-    #             return HttpResponseRedirect('/main/')
+    logout(request)
+    username = password = ''
+    if request.POST:
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            # login(user)
+            return redirect("index")
+        else:
+            messages.info(request,'username or password is incorrect')
     return render(request, 'login.html')
 
 
@@ -65,11 +76,13 @@ def signup(request):
         form = CreateUserForm(request.POST)
         if form.is_valid():
             form.save()
-            username = form.cleaned_data.get('username')
-            raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username=username, password=raw_password)
-            login(request, user)
-            return redirect('home')
+            # email = form.cleaned_data.get('email')
+            # username = form.cleaned_data.get('username')
+            # raw_password = form.cleaned_data.get('password1')
+            # user = authenticate(username=username, password=raw_password,email=email)
+            # login(request, user)
+            return redirect("login")
+
     else:
-        form = UserCreationForm()
+        form = CreateUserForm()
     return render(request, 'register.html', {'form': form})

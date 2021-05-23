@@ -123,6 +123,8 @@
                     
                     <div class="account-box z-depth-5 pad-h-10-on-mob">
                         <form method="post" class="content sign_in">
+                            {% csrf_token %}
+
                             <h1 style="color: #6237d0 !important;" class="white-text center-align no-marg" >login</h1>
                             <div class="center-align">
                                 <img src="../temp/login/img/user-placeholder.png" style="width:130px;margin: 40px auto">
@@ -131,18 +133,24 @@
 
                                 <div class="field">
                                     <label style="color: #6237d0 !important; direction: ltr !important  ;" class="white-text iransans_bold">email or username</label>
-                                    <input class="txt-input" name="email" type="text" dir="ltr">
+                                    <input class="txt-input" name="username" type="text" dir="ltr">
                                 </div>
                                 <div class="field">
                                     <label style="color: #6237d0 !important; direction: ltr !important  ;" class="white-text iransans_bold">password</label>
                                     <input class="txt-input" name="password" type="password" dir="ltr">
                                 </div>
                                                                 <div class="right-align marg-top-20">
-                                    <button class="ui submit button no-marg template-green-button" style="min-width: 150px; direction: ltr !important  ;">
+                                    <button type="submit" class="ui submit button no-marg template-green-button" style="min-width: 150px; direction: ltr !important  ;">
                                         submit
                                     </button>
                                 </div>
                             </div>
+
+                            {{form.errors}}
+                            {% for message in messages %}
+                            <p id="messages">{{message}}</p>
+                            {% endfor %}
+
                             <div class="ui two columns grid marg-top-20">
                                 <div class="column right-align">
                                     <a style="color: #7B809B !important;" class="size-9 white-text" href="../register">
@@ -200,7 +208,7 @@
                     rules: [
                         {
                             type: 'empty',
-                            prompt: 'لطفا ایمیل یا نام کاربری خود را وارد کنید'
+                            prompt: 'empty username'
                         }
                     ]
                 },
@@ -209,15 +217,15 @@
                     rules: [
                         {
                             type: 'empty',
-                            prompt: 'لطفا رمز عبور را وارد کنید'
+                            prompt: 'empty password'
                         },
                         {
                             type: 'minLength[6]',
-                            prompt: 'رمز عبور باید حداقل 6 کاراکتر باشد'
+                            prompt: 'password must be bigger than 6 charectors'
                         },
                         {
                             type: 'maxLength[16]',
-                            prompt: 'رمز عبور باید حداکثر 16 کاراکتر باشد'
+                            prompt: 'password must be smaller than 6 charectors'
                         },
                     ]
                 }

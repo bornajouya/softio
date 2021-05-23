@@ -88,7 +88,7 @@
       <img src="media/{{ads.photo}}" alt="">
       <div class="box-a2" style="display: block;">
         <h1>{{ads.title}}</h1>
-        <head>{{ads.description}}</head>
+        <head>{{ads.description |safe}}</head>
         <nav class="button">
           <ul class="group">
             <li><a href="#">download</a></li>

@@ -64,18 +64,6 @@ input[type='username']  {
 
 }
 
-input[type='username'] {
-    display: flex;
-    padding-left: 15px;
-    background-color: rgb(220, 223, 236);
-    border-radius: 20px;
-    margin-top: 18px;
-    margin-left: 15px;
-    width: 260;
-    height: 35px;
-    border: 0px solid;
-
-}
 
 input[type='email'] {
     display: flex;
@@ -96,6 +84,7 @@ input[type='password1'] {
     border-radius: 20px;
     margin-top: 18px;
     margin-left: 15px;
+    margin-left: 15px;
     width: 260;
     height: 35px;
     border: 0px solid;
@@ -107,8 +96,9 @@ input[type='password'] {
     box-sizing: border-box;
     background-color: rgb(220, 223, 236);
     border-radius: 20px;
-    padding-left: 20px;
+    padding-left: 15px;
     margin-top: 18px;
+    margin-left: 15px;
     width: 260;
     height: 35px;
     border: 0px solid;
