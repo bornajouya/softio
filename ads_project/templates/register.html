@@ -17,15 +17,8 @@
 
             {% for field in form %}
               <p>
-<!--                {{ field.label_tag }}<br>-->
                 {{ field }}
-<!--                {% if field.help_text %}-->
-<!--                  <small style="color: grey">{{ field.help_text }}</small>-->
-<!--                {% endif %}-->
-                {% for error in field.errors %}
-                  <p style="color: red">{{ error }}</p>
-                {% endfor %}
-              </p>
+
             {% endfor %}
 <!--            {{ form.first_name }}-->
 <!--            {{ form.last_name }}-->
@@ -44,15 +37,15 @@
             <input type="submit" value="sign up" >
 
         </form>
-        <div class="capcha">
-            <div class="capchatext">
-                <form>
-                    <input type="capcha" name="capcha" id="capcha" placeholder="">
-                </form>
-            </div>
-            <div class="capchaimg"> <img src="../temp/img/photo_2021-04-15_13-57-13.jpg" alt=""></div>
-        </div>
-<!--        {{form.errors}}-->
+<!--        <div class="capcha">-->
+<!--            <div class="capchatext">-->
+<!--                <form>-->
+<!--                    <input type="capcha" name="capcha" id="capcha" placeholder="">-->
+<!--                </form>-->
+<!--            </div>-->
+<!--            <div class="capchaimg"> <img src="../temp/img/photo_2021-04-15_13-57-13.jpg" alt=""></div>-->
+<!--        </div>-->
+        {{form.errors}}
         {% for message in messages %}
             <p id="messages">{{message}}</p>
         {% endfor %}
