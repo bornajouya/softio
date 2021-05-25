@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'adsAPI',
     'registerAPI',
     'ckeditor',
+    'chatAPI',
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'

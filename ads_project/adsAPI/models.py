@@ -16,3 +16,4 @@ class Ads(models.Model):
 
     def image_tag(self):
         return mark_safe('<img src="/media/%s" width="80" height="80" />' % self.photo)
+
