@@ -1,0 +1,176 @@
+<html>
+
+
+<head>
+  <link rel="stylesheet" href="http://127.0.0.1:8000/temp/css/flex-slider.css">
+  <link rel="stylesheet" href="http://127.0.0.1:8000/temp/css/font-awesome.css">
+  <link rel="stylesheet" href="http://127.0.0.1:8000/temp/css/templatemo-softy-pinko.css">
+<link rel="stylesheet" href="http://127.0.0.1:8000/temp/css/detail.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="chat.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<header>
+<div class="hd">
+<h1 style="font-size: 50px; color: aliceblue;  text-align: center;">softio</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="z-index: 100 !important;">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+</header>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+<body style="z-index:initial ;">
+
+  <div class="container">
+  <div class="col-md-12" style="background-color: #E0E3EE;margin-top: 30px;">
+    <div class="row">
+    <div class="col-md-4" >
+<!--      <img style="width: 100%; padding:30px 30px 1px 30px;" src="http://127.0.0.1:8000/temp/img/feb32be32a1b1a87f1f9c74da5be4b16.png" alt="">-->
+      <img style="width: 100%; padding:30px 30px 1px 30px;" src="http://127.0.0.1:8000/media/{{ads_ins.photo}}" alt="">
+      <p style="background-color: #929296;; margin-bottom: 30px; margin-left: 30px; margin-right: 30px; text-align: center; padding: 10px;color: beige;">price : 100$</p>
+    </div>
+    <div class="col-md-8" style="margin: auto;">
+      {% csrf_token %}
+
+
+      <h2 style="text-align: center; padding-top: 30PX; color: #2a4486;">{{ads_ins.title}}</h2>
+      <p style="padding: 20px 30px 10px 0px; text-align: center;"> {{ads_ins.description |safe}}</p>
+      <div class="star" style="text-align: center; margin-bottom: 30px;">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+      </div>
+
+      </div>
+
+  </div>
+</div>
+</div>
+
+<!-- chat  -->
+<div class="container" style="margin-top: 70px;">
+  <h3 class=" text-center" style=" background-color:rgb(15, 16, 82); padding: 20px; color: floralwhite;">Messaging</h3>
+  <div class="messaging">
+        <div class="inbox_msg">
+          <div class="mesgs" style="width: 100% !important;">
+            <div class="msg_history">
+              <div class="incoming_msg">
+                <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="received_msg">
+                  <div class="received_withd_msg">
+                    <p>Test which is a new approach to have all
+                      solutions</p>
+                    <span class="time_date"> 11:01 AM    |    June 9</span></div>
+                </div>
+              </div>
+              <div class="outgoing_msg">
+                <div class="sent_msg">
+                  <p>Test 2222 to have all
+                    solutions</p>
+                  <span class="time_date"> 11:01 AM    |    June 9</span> </div>
+              </div>
+              <div class="incoming_msg">
+                <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="received_msg">
+                  <div class="received_withd_msg">
+                    <p>Test, which is a n3333roach to have</p>
+                    <span class="time_date"> 11:01 AM    |    Yesterday</span></div>
+                </div>
+              </div>
+              <div class="outgoing_msg">
+                <div class="sent_msg">
+                  <p>Apollo Univer4444 India Test</p>
+                  <span class="time_date"> 11:01 AM    |    Today</span> </div>
+              </div>
+              <div class="incoming_msg">
+                <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="received_msg">
+                  <div class="received_withd_msg">
+                    <p>We work directly with our designers and suppliers,
+                      and sell direct to you, which means quality, exclusive
+                      products, at a price anyone can afford.</p>
+                    <span class="time_date"> 11:01 AM    |    Today</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="type_msg">
+              <div class="input_msg_write">
+                <input type="text" class="write_msg" placeholder="Type a message" />
+                <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div></div>
+</body>
+
+<!-- <footer style="background-color: black; height: 40px; margin-top: 30px;"> -->
+
+  <footer style="margin-top: 40px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <ul class="social">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="copyright">&copy; 2021</p>
+            </div>
+        </div>
+    </div>
+  </footer>
+</html>
