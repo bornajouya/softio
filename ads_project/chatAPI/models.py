@@ -13,3 +13,6 @@ class chat(models.Model):
 
     def __str__(self):
         return str(self.text)
+
+
+# pushed to main
