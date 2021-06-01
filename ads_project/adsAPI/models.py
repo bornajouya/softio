@@ -2,12 +2,12 @@ from django.db import models
 from ckeditor.fields import RichTextField
 from django.utils import timezone
 from django.utils.html import mark_safe
-
+from registerAPI.models import User
 
 class Ads(models.Model):
     title = models.CharField(default="no title", max_length=200)
     description = RichTextField()
-    # owner = models
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     photo = models.ImageField(upload_to="images", blank=True, null=True)
     publish_date_time = models.DateTimeField(default=timezone.now)
 

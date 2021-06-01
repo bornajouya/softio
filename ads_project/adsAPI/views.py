@@ -11,6 +11,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 import AdvancedHTMLParser
+from chatAPI.views import Chat_View
+from django.views.decorators.csrf import csrf_exempt
 
 
 def detail_view(request,id):
@@ -18,10 +20,15 @@ def detail_view(request,id):
 
     ads_ins = list(Ads.objects.values().filter(id=id))[0]
 
-    context ={"ads_ins": ads_ins}
-    print(ads_ins)
-    print(type(ads_ins))
+    context ={
+        "ads_ins": ads_ins,
+        "this_chat": Chat_View(request,id) 
+        }
+    print('this is un updated context %s' % context)
+    #chat_context= Chat_View(request,id)
+    #print('this is chat %s' % chat_context)
+    #context = context.update(chat_context)
+    print('this is %s context' % context)
 
-
-    print(id)
+    
     return render(request, 'detail.html',context=context)

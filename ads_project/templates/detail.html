@@ -92,29 +92,34 @@
 </div>
 </div>
 
-<!-- chat  -->
-<div class="container" style="margin-top: 70px;">
+ <!-- chat  -->
+
+ <div class="container" style="margin-top: 70px;">
   <h3 class=" text-center" style=" background-color:rgb(15, 16, 82); padding: 20px; color: floralwhite;">Messaging</h3>
   <div class="messaging">
         <div class="inbox_msg">
           <div class="mesgs" style="width: 100% !important;">
             <div class="msg_history">
+{% csrf_token %}
+{% for item in this_chat %}
+  {% if item.isfirst %}
               <div class="incoming_msg">
                 <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                 <div class="received_msg">
                   <div class="received_withd_msg">
-                    <p>Test which is a new approach to have all
-                      solutions</p>
-                    <span class="time_date"> 11:01 AM    |    June 9</span></div>
+                    <p>{{ item.text }}</p>
+                    <span class="time_date">{{item.time}}</span></div>
                 </div>
               </div>
+  {% else %}
               <div class="outgoing_msg">
                 <div class="sent_msg">
-                  <p>Test 2222 to have all
-                    solutions</p>
-                  <span class="time_date"> 11:01 AM    |    June 9</span> </div>
+                  <p>{{item.text }}</p>
+                  <span class="time_date">{{item.time}}</span> </div>
               </div>
-              <div class="incoming_msg">
+  {% endif %}
+{% endfor %}
+              <!-- <div class="incoming_msg">
                 <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                 <div class="received_msg">
                   <div class="received_withd_msg">
@@ -137,11 +142,17 @@
                     <span class="time_date"> 11:01 AM    |    Today</span></div>
                 </div>
               </div>
-            </div>
+            </div> -->
             <div class="type_msg">
               <div class="input_msg_write">
-                <input type="text" class="write_msg" placeholder="Type a message" />
+                <form action='' name="detail_view" method="POST" >
+                  <!--TODO: activating the onclick button, at the moment it's just working by press enter, 
+                  typing place in chat view should be stand out side of the scroller-->
+                {% csrf_token %}
+                
+                <input name="text" type="text" class="write_msg" placeholder="Type a message" />
                 <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+              </form>
               </div>
             </div>
           </div>
