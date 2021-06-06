@@ -15,7 +15,7 @@ from adsAPI.models import Ads
 import AdvancedHTMLParser
 
 
-def login(request):
+def login(request): 
     return render(request, 'login.html')
 
 def index(request):
@@ -30,7 +30,7 @@ def index(request):
 
     context ={"ads_list": ads_list}
 
-    return render(request, 'index.html',context=context)
+    return render(request, 'index.html', context)
 
 def login_member(request):
     logout(request)

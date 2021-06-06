@@ -21,6 +21,8 @@ def Chat_View(request,id):
         if  Ads.objects.filter(user__username=user,id=id).exists():
             new_msg.isfirst = True
             chat.save(new_msg)
+        else:
+            chat.save(new_msg)
             #return detail_view(request,id)
         
         #return HttpResponse(500)
@@ -30,6 +32,8 @@ def Chat_View(request,id):
 #def Chat_View(request,id):
     print(Ads.objects.values().filter(id=id))
     if chat.objects.values().filter(ads=Ads.objects.values().filter(id=id)[0]['id']):
-        this_chat = chat.objects.all()
+        this_chat = chat.objects.values().filter(ads=Ads.objects.values().filter(id=id)[0]['id'])
+    else:
+        this_chat = None
        
     return this_chat
