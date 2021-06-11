@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'registerAPI',
     'ckeditor',
     'chatAPI',
+    'rest_framework',
+    'blogadmin',
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
@@ -72,6 +74,14 @@ TEMPLATES = [
         },
     },
 ]
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
 
 WSGI_APPLICATION = 'ads_project.wsgi.application'
 
