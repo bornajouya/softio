@@ -25,7 +25,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="405838f5-b74b-4d4b-9ccd-4a8b6dbadb9e" name="Default Changelist" comment="" />
+    <list default="true" id="405838f5-b74b-4d4b-9ccd-4a8b6dbadb9e" name="Default Changelist" comment="panel changed">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_26_2021_16_12__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_26_2021_16_12__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_26_2021_16_21__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_26_2021_16_21__Default_Changelist_.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,12 +42,12 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="login_reg_handeling" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JupyterTrust" id="79e2bd79-e534-4a66-9a86-57a183d396e5" />
+  <component name="JupyterTrust" id="23babb68-7377-4366-8f2a-b23ae4ab9f00" />
   <component name="ProjectId" id="1s4jrUSwOA2o8FZhoMuqn6sVH9I" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
