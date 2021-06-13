@@ -1,0 +1,6 @@
+.account-box{
+    padding: 20px;
+    background-image: linear-gradient(#8B24B7, #7B20A2, #6B1C8D);
+    border-radius: 8px;
+    visibility: hidden;
+}

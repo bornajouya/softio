@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .hd {
     
     background: linear-gradient(145deg,#88DFDA, rgb(15, 16, 82) 0%, rgb(93, 187, 231) , #32326A , #16164D 100%);

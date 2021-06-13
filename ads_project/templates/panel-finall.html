@@ -1,0 +1,448 @@
+<html>
+
+
+<head>
+  <link rel="stylesheet" href="../temp/css/flex-slider.css">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500" rel="stylesheet"/>
+    <link href="https://cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css" rel="stylesheet" />
+
+    <!-- PLUGINS CSS STYLE -->
+    <link href="../temp/assets/plugins/toaster/toastr.min.css" rel="stylesheet" />
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link href="../temp/assets/plugins/nprogress/nprogress.css" rel="stylesheet" />
+    <link href="../temp/assets/plugins/flag-icons/css/flag-icon.min.css" rel="stylesheet"/>
+    <link href="../temp/assets/plugins/jvectormap/jquery-jvectormap-2.0.3.css" rel="stylesheet" />
+    <link href="../temp/assets/plugins/ladda/ladda.min.css" rel="stylesheet" />
+    <link href="../temp/assets/plugins/select2/css/select2.min.css" rel="stylesheet" />
+    <link href="../temp/assets/plugins/daterangepicker/daterangepicker.css" rel="stylesheet" />
+
+    <!-- SLEEK CSS -->
+    <link id="sleek-css" rel="stylesheet" href="../temp/assets/css/sleek.css" />
+    <script src="../temp/assets/plugins/nprogress/nprogress.js"></script>
+
+
+    <!-- FAVICON -->
+    <link href="assets/img/favicon.png" rel="shortcut icon" />
+  <link rel="stylesheet" href="../temp/css/font-awesome.css">
+  <link rel="stylesheet" href="../temp/css/templatemo-softy-pinko.css">
+<link rel="stylesheet" href="../temp/assets/css/index.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+<body style="z-index:initial ;">
+  <header style=" z-index: 10000000000;">
+    <div class="hd">
+    <h1 style="font-size: 50px; color: aliceblue;  text-align: center;">softio</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="z-index: 100 !important;">
+    <a class="navbar-brand" href="#">welcome {% firstof user.get_short_name user.get_username %}</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+          <a class="nav-link" href="{{ site_url }}">visit site <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{user_name}}">{{user_name}}</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+          <a class="nav-link disabled" href="{% url 'admin:logout' %}" tabindex="-1">Log out</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+<!--
+  <div class="container">
+  <div class="col-md-12" style="background-color: #E0E3EE;margin-top: 30px;">
+    <div class="row">
+    <div class="col-md-4" >
+      <img style="width: 30%; padding-top: 10px; padding-bottom: 10px;" src="./img/feb32be32a1b1a87f1f9c74da5be4b16.png" alt="">
+    </div>
+
+    <div class="col-md-4" style="margin: auto;">
+      <h2 style="text-align: center; color: #2a4486;">example title</h2>
+      </div>
+
+    <div class="col-md-4" style="margin: auto;">
+
+      <div class="star" style="text-align: center;">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+</div> -->
+<div class="wrapper">
+
+<aside class="left-sidebar bg-sidebar">
+  <div id="sidebar" class="sidebar sidebar-with-footer" style="position: fixed;
+  /* top: 100px; */
+  width: 100%;
+  ">
+    <!-- Aplication Brand -->
+    <div class="app-brand" style="padding-top: 20px;background-color: #32326A">
+      <a href="/index.html">
+
+        <span class="brand-name" style="margin-left: 0rem; !important"> Dashboard</span>
+      </a>
+    </div>
+    <!-- begin sidebar scrollbar -->
+    <div class="sidebar-scrollbar">
+
+      <!-- sidebar menu -->
+      <ul class="nav sidebar-inner" id="sidebar-menu">
+
+
+
+          <li  class="has-sub" >
+            <a class="sidenav-item-link" href="#container" data-toggle="collapse" data-target="#ui-elements"
+              aria-expanded="false" aria-controls="ui-elements">
+              <i class="mdi mdi-folder-multiple-outline"></i>
+              <span class="nav-text">Ads class
+              </span>
+            </a>
+          </li>
+
+
+
+
+
+          <li  class="has-sub" >
+            <a class="sidenav-item-link" href="#messaging" data-toggle="collapse" data-target="#messaging"
+              aria-expanded="false" aria-controls="charts">
+              <i class="mdi mdi-wechat"></i>
+              <span class="nav-text">Chats</span>
+            </a>
+                    </li>
+
+
+
+
+
+          <li  class="has-sub" >
+            <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#documentation"
+              aria-expanded="false" aria-controls="documentation">
+              <i class="mdi mdi-settings"></i>
+              <span class="nav-text">account setting</span>
+            </a>
+                    </li>
+
+                           </li>
+                          </ul>
+
+    </div>
+
+    <hr class="separator" />
+
+    <div class="sidebar-footer">
+      <div class="sidebar-footer-content">
+        <h6 class="text-uppercase">
+          Cpu Uses <span class="float-right">40%</span>
+        </h6>
+        <div class="progress progress-xs">
+          <div
+            class="progress-bar active"
+            style="width: 40%;"
+            role="progressbar"
+          ></div>
+        </div>
+        <h6 class="text-uppercase">
+          Memory Uses <span class="float-right">65%</span>
+        </h6>
+        <div class="progress progress-xs">
+          <div
+            class="progress-bar progress-bar-warning"
+            style="width: 65%;"
+            role="progressbar"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col align-self-center" >
+      <!-- Recent Order Table -->
+      <div class="card card-table-border-none" id="recent-orders" style="background-color: rgb(229, 229, 245); margin-top: 50px;margin-left: 90px; ">
+        <div class="card-header justify-content-between">
+          <h2>Recent Ads</h2>
+          <div class="date-range-report " >
+          </div>
+        </div>
+        <div class="card-body pt-0 pb-5" >
+          <table class="table card-table table-responsive table-responsive-large" style="width:100%; padding-left: 13px;">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th class="d-none d-md-table-cell">Units</th>
+                <th class="d-none d-md-table-cell">Order Date</th>
+                <th class="d-none d-md-table-cell">Order Cost</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+
+            {% for ads in ads_list %}
+              <tr>
+                <td >{{ads.id}}</td>
+                <td >
+                  <a class="text-dark" href="http://127.0.0.1:8000/detail/ads/{{ads.id}}/"> {{ads.title}}</a>
+                </td>
+                <td class="d-none d-md-table-cell" style="color: #8a909d;">1 Unit</td>
+                <td class="d-none d-md-table-cell" style="color: #8a909d;">{{publish_date_time}}</td>
+                <td class="d-none d-md-table-cell"style="color: #8a909d;">${{ads.id}}</td>
+                <td >
+                  <img src="../media/{{ads.photo}}" alt="" style="max-width: 50px;">
+
+
+                </td>
+                <td class="text-right">
+                  <div class="dropdown show d-inline-block widget-dropdown">
+                    <a class="dropdown-toggle icon-burger-mini" href="" role="button" id="dropdown-recent-order1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static"></a>
+                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-recent-order1">
+                      <li class="dropdown-item">
+                        <a href="http://127.0.0.1:8000/detail/ads/{{ads.id}}/">View</a>
+                      </li>
+                      <li class="dropdown-item">
+                        <a href="#">Remove</a>
+                      </li>
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+            {% endfor %}
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+</div>
+</div>
+
+
+</div>
+
+ <!-- chat -->
+<div class="container"
+style="
+max-width: 955px;
+margin-left: 325px;
+
+">
+  <h3 class=" text-center" style=" background-color:rgb(15, 16, 82); padding: 20px; color: floralwhite;">Messaging</h3>
+  <div class="messaging">
+        <div class="inbox_msg">
+          <div class="inbox_people">
+            <div class="headind_srch">
+              <div class="recent_heading">
+                <h4>Recent</h4>
+              </div>
+              <div class="srch_bar">
+                <div class="stylish-input-group">
+                  <input type="text" class="search-bar"  placeholder="Search" >
+                  <span class="input-group-addon">
+                  <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+                  </span> </div>
+              </div>
+            </div>
+            <div class="inbox_chat">
+              <div class="chat_list active_chat">
+                <div class="chat_people">
+                  <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                  <div class="chat_ib">
+                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                    <p>Test, which is a new approach to have all solutions
+                      astrology under one roof.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="chat_list">
+                <div class="chat_people">
+                  <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                  <div class="chat_ib">
+                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                    <p>Test, which is a new approach to have all solutions
+                      astrology under one roof.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="chat_list">
+                <div class="chat_people">
+                  <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                  <div class="chat_ib">
+                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                    <p>Test, which is a new approach to have all solutions
+                      astrology under one roof.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="chat_list">
+                <div class="chat_people">
+                  <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                  <div class="chat_ib">
+                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                    <p>Test, which is a new approach to have all solutions
+                      astrology under one roof.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="chat_list">
+                <div class="chat_people">
+                  <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                  <div class="chat_ib">
+                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                    <p>Test, which is a new approach to have all solutions
+                      astrology under one roof.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="chat_list">
+                <div class="chat_people">
+                  <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                  <div class="chat_ib">
+                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                    <p>Test, which is a new approach to have all solutions
+                      astrology under one roof.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="chat_list">
+                <div class="chat_people">
+                  <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                  <div class="chat_ib">
+                    <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
+                    <p>Test, which is a new approach to have all solutions
+                      astrology under one roof.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mesgs">
+            <div class="msg_history">
+              <div class="incoming_msg">
+                <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="received_msg">
+                  <div class="received_withd_msg">
+                    <p>Test which is a new approach to have all
+                      solutions</p>
+                    <span class="time_date"> 11:01 AM    |    June 9</span></div>
+                </div>
+              </div>
+              <div class="outgoing_msg">
+                <div class="sent_msg">
+                  <p>Test which is a new approach to have all
+                    solutions</p>
+                  <span class="time_date"> 11:01 AM    |    June 9</span> </div>
+              </div>
+              <div class="incoming_msg">
+                <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="received_msg">
+                  <div class="received_withd_msg">
+                    <p>Test, which is a new approach to have</p>
+                    <span class="time_date"> 11:01 AM    |    Yesterday</span></div>
+                </div>
+              </div>
+              <div class="outgoing_msg">
+                <div class="sent_msg">
+                  <p>Apollo University, Delhi, India Test</p>
+                  <span class="time_date"> 11:01 AM    |    Today</span> </div>
+              </div>
+              <div class="incoming_msg">
+                <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+                <div class="received_msg">
+                  <div class="received_withd_msg">
+                    <p>We work directly with our designers and suppliers,
+                      and sell direct to you, which means quality, exclusive
+                      products, at a price anyone can afford.</p>
+                    <span class="time_date"> 11:01 AM    |    Today</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="type_msg">
+              <div class="input_msg_write">
+                <input type="text" class="write_msg" placeholder="Type a message" />
+                <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+
+<!-- <footer style="background-color: black; height: 40px; margin-top: 30px;"> -->
+
+  <footer style="margin-top: 40px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <ul class="social">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="copyright">&copy; 2021</p>
+            </div>
+        </div>
+    </div>
+  </footer>
+
+</html>
