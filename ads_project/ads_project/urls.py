@@ -21,6 +21,8 @@ from django.conf.urls.static import static
 from django.contrib.auth.models import User
 from blogadmin.admin import blog_site
 from rest_framework import routers, serializers, viewsets
+from django.views.generic import TemplateView
+
 
 # Serializers define the API representation.
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -39,6 +41,7 @@ router.register(r'users', UserViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('blogadmin/add/', include('blogadmin.urls')),
     path('blogadmin/', blog_site.urls),
     path('', include('registerAPI.urls')),
     path('detail/', include('adsAPI.urls')),
