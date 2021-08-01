@@ -19,11 +19,11 @@ def add(request):
 def addcontent(request):
     # logout(request)
     if request.POST:
-        ads_name = request.POST.get('ads_name',False)
-        description = request.POST.get('description',False)
-        print(request)
-        print(request.POST['ads_name'])
-        print(request.POST['description'])
+        ads_name = request.POST.get('ads_name')
+        description = request.POST.get('description')
+        # print(request)
+        # print(request.POST['ads_name'])
+        # print(request.POST['description'])
         # description = request.POST['description']
 
         # try:

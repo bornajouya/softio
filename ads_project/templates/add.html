@@ -269,18 +269,18 @@
     <form method="post" action="./addcontent/">
         {% csrf_token %}
       <div class="form-group">
-        <input type="text" class="form-control" id="ads_name">
+        <input type="text" class="form-control"  name="ads_name" id="ads_name">
         <label for="ads_name">ads name</label>
         <div class="line"></div>
       </div>
       <div class="form-group">
-        <input type="file" class="form-control" id="file">
+        <input type="file" class="form-control" name="file"  id="file">
         <label for="file">ads cover</label>
         <div class="line"></div>
       </div>
 
       <div class="form-group">
-        <textarea class="form-control" rows="8" id="description"></textarea>
+        <textarea class="form-control" rows="8" name="description" id="description"></textarea>
         <label>ads description...</label>
         <div class="line"></div>
       </div>
